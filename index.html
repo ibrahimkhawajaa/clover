@@ -115,87 +115,44 @@
     .hero-note { display: flex; align-items: center; gap: 9px; margin-top: 25px; color: #748278; font-size: 12px; }
     .maple { display: grid; width: 23px; height: 23px; place-items: center; border-radius: 50%; background: #f7e9e4; color: #b84e3b; font-size: 13px; }
 
-    .hero-art {
+    .hero-art { position: relative; z-index: 1; min-height: clamp(449px, 40vw, 620px); display: grid; place-items: center; }
+    .art-halo { position: absolute; width: clamp(360px, 32vw, 500px); height: clamp(360px, 32vw, 500px); border-radius: 50%; background: #e1edf0; }
+    .phone {
       position: relative;
-      z-index: 1;
-      min-height: clamp(420px, 38vw, 540px);
-      overflow: hidden;
-      border: 1px solid #dce5d7;
-      border-radius: 8px 100px 8px 8px;
-      background: #eef2e9;
-    }
-    .art-label {
-      position: absolute;
-      z-index: 1;
-      top: 29px;
-      right: 32px;
-      left: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      color: #657465;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: .13em;
-    }
-    .art-label-mark { color: var(--green); font-size: 17px; }
-    .journey-path { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; }
-    .journey-path path { fill: none; stroke: #a4bb93; stroke-dasharray: 3 8; stroke-linecap: round; stroke-width: 2; }
-    .journey-path circle { fill: #eef2e9; stroke: #668d5f; stroke-width: 2; }
-    .journey-note {
-      position: absolute;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      max-width: 240px;
-      padding: 13px 16px;
-      border: 1px solid #e6e5d9;
-      border-radius: 4px;
-      background: #fffefa;
-      box-shadow: 0 8px 20px rgba(48, 64, 45, .07);
-    }
-    .journey-note-question { top: 25%; left: 7%; transform: rotate(-3deg); }
-    .journey-note-next { bottom: 19%; left: 12%; transform: rotate(2deg); }
-    .journey-note-number {
-      display: grid;
-      width: 29px;
-      height: 29px;
-      flex: 0 0 29px;
-      place-items: center;
-      border: 1px solid #d6e1cd;
-      border-radius: 50%;
-      color: var(--green);
-      font-family: var(--serif);
-      font-size: 14px;
-    }
-    .journey-note small, .journey-note strong { display: block; }
-    .journey-note small { margin-bottom: 4px; color: #788578; font-size: 8px; font-weight: 700; letter-spacing: .1em; }
-    .journey-note strong { color: #26372e; font-family: var(--display); font-size: 11px; font-weight: 600; }
-    .brand-stamp {
-      position: absolute;
-      z-index: 1;
-      top: 43%;
-      left: 69%;
-      width: clamp(158px, 17vw, 220px);
-      overflow: hidden;
-      border: 7px solid #fff;
-      border-radius: 3px;
+      width: 253px;
+      min-height: 432px;
+      padding: 10px;
+      border: 1px solid #d8e0d7;
+      border-radius: 35px;
       background: #fff;
-      box-shadow: 0 16px 35px rgba(39, 58, 42, .13);
-      transform: translate(-50%, -50%) rotate(3deg);
+      box-shadow: 0 26px 65px rgba(31, 67, 47, .14), 0 4px 12px rgba(31, 67, 47, .06);
+      transform: scale(1.12) rotate(1deg);
     }
-    .brand-stamp img { display: block; width: 100%; height: auto; }
-    .art-caption {
-      position: absolute;
-      bottom: 28px;
-      left: 29px;
-      color: #718070;
-      font-family: var(--serif);
-      font-size: 14px;
-      font-style: italic;
-    }
+    .phone-screen { min-height: 410px; overflow: hidden; padding: 19px 14px 14px; border-radius: 27px; background: #f8faf6; }
+    .phone-top { display: flex; align-items: center; justify-content: space-between; color: #68796e; font-size: 9px; }
+    .phone-top strong { color: var(--ink); font-size: 10px; }
+    .phone-greeting { margin: 27px 0 4px; font-family: var(--display); font-size: 21px; font-weight: 700; letter-spacing: -.055em; }
+    .phone-subtitle { margin: 0 0 17px; color: #748278; font-size: 9px; }
+    .care-card { padding: 14px; border-radius: 15px; background: #e9f1e3; }
+    .care-card-label { display: flex; align-items: center; gap: 7px; color: var(--green-dark); font-size: 8px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .pulse { display: grid; width: 19px; height: 19px; place-items: center; border-radius: 50%; background: #d2e7c3; font-size: 10px; }
+    .care-card h3 { margin: 10px 0 5px; font-size: 13px; letter-spacing: -.02em; }
+    .care-card p { margin: 0; color: #637466; font-size: 9px; line-height: 1.6; }
+    .phone-section-label { margin: 19px 0 8px; font-size: 10px; font-weight: 700; }
+    .phone-row { display: flex; align-items: center; gap: 9px; margin-top: 7px; padding: 10px; border: 1px solid #edf0eb; border-radius: 12px; background: white; }
+    .row-icon { display: grid; width: 27px; height: 27px; flex: 0 0 27px; place-items: center; border-radius: 9px; background: #f0f5e9; color: var(--green); font-size: 12px; }
+    .phone-row strong, .phone-row small { display: block; }
+    .phone-row strong { margin-bottom: 3px; font-size: 9px; }
+    .phone-row small { color: #7c887e; font-size: 8px; }
+    .phone-nav { display: flex; justify-content: space-around; margin-top: 16px; padding-top: 11px; border-top: 1px solid #e9ede6; color: #8b978c; font-size: 7px; text-align: center; }
+    .phone-nav span:first-child { color: var(--green); }
+    .float-card { position: absolute; display: flex; align-items: center; gap: 9px; padding: 12px 15px; border: 1px solid #ecf0e9; border-radius: 13px; background: rgba(255,255,255,.95); box-shadow: 0 10px 30px rgba(31, 67, 47, .09); }
+    .float-card.top { top: 88px; right: 0; }
+    .float-card.bottom { bottom: 71px; left: -6px; }
+    .float-icon { display: grid; width: 31px; height: 31px; place-items: center; border-radius: 10px; background: #eff5e8; color: var(--green); font-size: 15px; }
+    .float-card strong, .float-card small { display: block; }
+    .float-card strong { margin-bottom: 3px; font-size: 10px; }
+    .float-card small { color: var(--muted); font-size: 8px; }
 
     .hero-band {
       position: relative;
@@ -302,12 +259,10 @@
     @media (max-width: 900px) {
       .hero-grid { gap: 12px; }
       .hero-copy { padding-top: 23px; }
-      .hero-art { min-height: 430px; }
-      .brand-stamp { width: clamp(175px, 23vw, 210px); }
-      .journey-note-question { top: 18%; }
-      .brand-stamp { top: 57%; }
-      .journey-note-next { bottom: 8%; }
-      .art-caption { display: none; }
+      .hero-art { min-height: 420px; }
+      .art-halo { width: 310px; height: 310px; }
+      .phone { transform: scale(.91) rotate(-3deg); }
+      .float-card.top { right: -10px; }
       .steps-grid { gap: 55px; }
       .promise-card { gap: 32px; padding: 44px; }
       .faq-grid { gap: 50px; }
@@ -330,16 +285,11 @@
       .hero h1 { max-width: 470px; margin-top: 17px; font-size: clamp(43px, 10.5vw, 56px); }
       .hero-copy > p { font-size: 14px; }
       .hero-actions { gap: 16px; }
-      .hero-art { min-height: 370px; margin-top: 8px; border-top-right-radius: 68px; }
-      .art-label { top: 23px; right: 18px; left: 18px; font-size: 7px; letter-spacing: .09em; }
-      .journey-note { gap: 8px; max-width: 218px; padding: 10px 11px; }
-      .journey-note-question { top: 21%; left: 5%; }
-      .journey-note-next { bottom: 15%; left: 7%; }
-      .journey-note small { font-size: 7px; }
-      .journey-note strong { font-size: 10px; }
-      .journey-note-number { width: 25px; height: 25px; flex-basis: 25px; font-size: 12px; }
-      .brand-stamp { top: 52%; left: 55%; width: clamp(145px, 46%, 185px); border-width: 5px; }
-      .art-caption { bottom: 14px; left: 17px; font-size: 12px; }
+      .hero-art { min-height: 373px; margin-top: -4px; }
+      .art-halo { width: 300px; height: 300px; }
+      .phone { transform: scale(.86) rotate(-3deg); }
+      .float-card.top { top: 38px; right: -1px; }
+      .float-card.bottom { bottom: 30px; left: -2px; }
       .hero-band { align-items: flex-start; flex-direction: column; gap: 19px; min-height: 0; padding: 27px 5% 31px; }
       .band-copy p { font-size: 13px; }
       .store-group { width: 100%; flex-wrap: wrap; gap: 9px; }
@@ -372,7 +322,9 @@
     @media (max-width: 370px) {
       .hero h1 { font-size: 41px; }
       .hero-actions { align-items: flex-start; flex-direction: column; gap: 13px; }
-      .journey-note { max-width: 204px; }
+      .float-card { gap: 6px; padding: 9px 10px; }
+      .float-card.top { right: -8px; }
+      .float-card.bottom { left: -8px; }
       .store-button { flex-basis: 100%; }
     }
     @media (min-width: 1440px) {
@@ -388,7 +340,10 @@
       .hero h1 { max-width: 760px; font-size: clamp(72px, 4.8vw, 92px); }
       .hero-copy > p { max-width: 590px; font-size: 17px; }
       .hero-art { min-height: clamp(560px, 40vw, 700px); }
-      .brand-stamp { width: clamp(230px, 17vw, 290px); }
+      .art-halo { width: clamp(480px, 32vw, 610px); height: clamp(480px, 32vw, 610px); }
+      .phone { transform: scale(1.27) rotate(1deg); }
+      .float-card.top { top: 17%; }
+      .float-card.bottom { bottom: 15%; }
       .hero-band { min-height: 190px; padding-right: 8%; padding-left: 8%; }
       .band-copy { max-width: 560px; }
       .band-copy p { font-size: 16px; }
@@ -399,13 +354,6 @@
       .steps-section { padding: 112px 0; }
       .promise { padding: 108px 0; }
       .faq { padding-bottom: 125px; }
-    }
-    @media (min-width: 681px) and (max-width: 1100px) {
-      .hero-art { min-height: 430px; }
-      .journey-note-question { top: 18%; }
-      .brand-stamp { top: 57%; left: 76%; width: 160px; }
-      .journey-note-next { bottom: 8%; }
-      .art-caption { display: none; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
@@ -442,24 +390,27 @@
           </div>
           <div class="hero-note"><span class="maple" aria-hidden="true">✳</span> Proudly rooted in Canada</div>
         </div>
-        <div class="hero-art" role="img" aria-label="The Clover logo at the heart of a winding path from your questions to your next step">
-          <div class="art-label"><span>YOUR HEALTH JOURNEY</span><span class="art-label-mark" aria-hidden="true">✳</span><span>NO TWO PATHS ARE THE SAME</span></div>
-          <svg class="journey-path" viewBox="0 0 600 480" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M-30 361 C64 358 76 241 178 259 S255 362 333 276 S398 153 486 177 S544 226 640 111"></path>
-            <circle cx="76" cy="307" r="6"></circle>
-            <circle cx="333" cy="276" r="6"></circle>
-            <circle cx="532" cy="196" r="6"></circle>
-          </svg>
-          <div class="journey-note journey-note-question">
-            <span class="journey-note-number">01</span>
-            <span><small>START WITH A QUESTION</small><strong>What’s on your mind?</strong></span>
+        <div class="hero-art" aria-label="Preview of the Clover health app">
+          <div class="art-halo"></div>
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="phone-top"><strong>clover</strong><span>9:41 &nbsp; ◉</span></div>
+              <div class="phone-greeting">Good morning.</div>
+              <p class="phone-subtitle">A little clarity for your health journey.</p>
+              <div class="care-card">
+                <div class="care-card-label"><span class="pulse">✳</span> Your care, at a glance</div>
+                <h3>One step at a time.</h3>
+                <p>Keep the details together and find your next step when you need it.</p>
+              </div>
+              <div class="phone-section-label">Your health hub</div>
+              <div class="phone-row"><span class="row-icon">▤</span><span><strong>Health information</strong><small>Your details, in one place</small></span></div>
+              <div class="phone-row"><span class="row-icon">♡</span><span><strong>Care notes</strong><small>Feel ready for your next visit</small></span></div>
+              <div class="phone-row"><span class="row-icon">↗</span><span><strong>Helpful next steps</strong><small>Know where to turn</small></span></div>
+              <div class="phone-nav"><span>⌂<br>Home</span><span>▤<br>My health</span><span>♡<br>Support</span><span>◯<br>Profile</span></div>
+            </div>
           </div>
-          <div class="brand-stamp"><img src="Clover.png" alt=""></div>
-          <div class="journey-note journey-note-next">
-            <span class="journey-note-number">02</span>
-            <span><small>TAKE IT AT YOUR PACE</small><strong>Find your way forward.</strong></span>
-          </div>
-          <span class="art-caption">Your path is yours.</span>
+          <div class="float-card top"><span class="float-icon">✳</span><span><strong>Care, made clearer</strong><small>Less overwhelm. More understanding.</small></span></div>
+          <div class="float-card bottom"><span class="float-icon">♡</span><span><strong>Your journey, your pace</strong><small>Support that starts with you</small></span></div>
         </div>
       </div>
       <div class="container hero-band" id="download">
